@@ -1,0 +1,52 @@
+
+Log Entry :
+08/13/2020 18:23:38
+Error in : https://localhost:44300/token. 
+
+Error message:System.InvalidOperationException: Metadata contains a reference that cannot be resolved: 'https://192.168.191.13/TRA/XRMServices/2011/Organization.svc?wsdl=wsdl0'. ---> System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Description.MetadataExchangeClient.MetadataLocationRetriever.DownloadMetadata(TimeoutHelper timeoutHelper)
+   at System.ServiceModel.Description.MetadataExchangeClient.MetadataRetriever.Retrieve(TimeoutHelper timeoutHelper)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Description.MetadataExchangeClient.MetadataRetriever.Retrieve(TimeoutHelper timeoutHelper)
+   at System.ServiceModel.Description.MetadataExchangeClient.ResolveNext(ResolveCallState resolveCallState)
+   at System.ServiceModel.Description.MetadataExchangeClient.ResolveNext(ResolveCallState resolveCallState)
+   at System.ServiceModel.Description.MetadataExchangeClient.GetMetadata(MetadataRetriever retriever)
+   at System.ServiceModel.Description.MetadataExchangeClient.GetMetadata(Uri address, MetadataExchangeClientMode mode)
+   at Microsoft.Xrm.Sdk.Client.ServiceMetadataUtility.RetrieveServiceEndpointMetadata(Type contractType, Uri serviceUri, Boolean checkForSecondary)
+   at Microsoft.Xrm.Sdk.Client.ServiceConfiguration`1..ctor(Uri serviceUri, Boolean checkForSecondary)
+   at Microsoft.Xrm.Sdk.Client.OrganizationServiceConfiguration..ctor(Uri serviceUri, Boolean enableProxyTypes, Assembly assembly)
+   at Microsoft.Xrm.Sdk.Client.ServiceConfigurationFactory.CreateConfiguration[TService](Uri serviceUri, Boolean enableProxyTypes, Assembly assembly)
+   at Microsoft.Xrm.Sdk.Client.ServiceConfigurationFactory.CreateConfiguration[TService](Uri serviceUri)
+   at Microsoft.Xrm.Sdk.Client.ServiceProxy`1..ctor(Uri uri, Uri homeRealmUri, ClientCredentials clientCredentials, ClientCredentials deviceCredentials)
+   at Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy..ctor(Uri uri, Uri homeRealmUri, ClientCredentials clientCredentials, ClientCredentials deviceCredentials)
+   at TRAWebApplication.ConfigSetting.OrganizationService.GetCRMService(ConfigData _serviceConfiguration) in C:\Akash\TRAWebApplication\TRAWebApplication\ConfigSetting\ConfigData.cs:line 111
+   at TRAWebApplication.Providers.ApplicationOAuthProvider.<GrantResourceOwnerCredentials>d__3.MoveNext() in C:\Akash\TRAWebApplication\TRAWebApplication\Providers\ApplicationOAuthProvider.cs:line 85
+===========================================================================================================================================================================================================================================================================
+
+Log Entry :
+08/13/2020 19:14:03
+Error in : https://localhost:44300/token. 
+
+Error message:System.InvalidOperationException: Metadata contains a reference that cannot be resolved: 'https://192.168.191.13/TRA/XRMServices/2011/Organization.svc?wsdl&sdkversion=9'. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.191.13:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Description.MetadataExchangeClient.MetadataLocationRetriever.DownloadMetadata(TimeoutHelper timeoutHelper)
+   at System.ServiceModel.Description.MetadataExchangeClient.MetadataRetriever.Retrieve(TimeoutHelper timeoutHelper)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Description.MetadataExchangeClient.MetadataRetriever.Retrieve(TimeoutHelper timeoutHelper)
+   at System.ServiceModel.Description.MetadataExchangeClient.ResolveNext(ResolveCallState resolveCallState)
+   at System.ServiceModel.Description.MetadataExchangeClient.GetMetadata(MetadataRetriever retriever)
+   at System.ServiceModel.Description.MetadataExchangeClient.GetMetadata(Uri address, MetadataExchangeClientMode mode)
+   at Microsoft.Xrm.Sdk.Client.ServiceMetadataUtility.RetrieveServiceEndpointMetadata(Type contractType, Uri serviceUri, Boolean checkForSecondary)
+   at Microsoft.Xrm.Sdk.Client.ServiceConfiguration`1..ctor(Uri serviceUri, Boolean checkForSecondary)
+   at Microsoft.Xrm.Sdk.Client.OrganizationServiceConfiguration..ctor(Uri serviceUri, Boolean enableProxyTypes, Assembly assembly)
+   at Microsoft.Xrm.Sdk.Client.ServiceConfigurationFactory.CreateConfiguration[TService](Uri serviceUri, Boolean enableProxyTypes, Assembly assembly)
+   at Microsoft.Xrm.Sdk.Client.ServiceConfigurationFactory.CreateConfiguration[TService](Uri serviceUri)
+   at Microsoft.Xrm.Sdk.Client.ServiceProxy`1..ctor(Uri uri, Uri homeRealmUri, ClientCredentials clientCredentials, ClientCredentials deviceCredentials)
+   at Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy..ctor(Uri uri, Uri homeRealmUri, ClientCredentials clientCredentials, ClientCredentials deviceCredentials)
+   at TRAWebApplication.ConfigSetting.OrganizationService.GetCRMService(ConfigData _serviceConfiguration) in C:\Akash\TRAWebApplication\TRAWebApplication\ConfigSetting\ConfigData.cs:line 111
+   at TRAWebApplication.Providers.ApplicationOAuthProvider.<GrantResourceOwnerCredentials>d__3.MoveNext() in C:\Akash\TRAWebApplication\TRAWebApplication\Providers\ApplicationOAuthProvider.cs:line 85
+===========================================================================================================================================================================================================================================================================
