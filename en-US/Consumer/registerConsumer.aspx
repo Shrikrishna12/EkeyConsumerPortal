@@ -291,8 +291,8 @@
                                                                 <div class="col-md-6">
                                                                     <div class="form-group">
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap selectbox nationspn">
-                                                                            <input class="temp_input_field nationselector" type="text" id="txtnation1" mandatory maxlength="50">
-                                                                            <span class="fa fa-fw fa-caret-down field-icon toggle-selecticon"></span>
+                                                                            <input class="temp_input_field nationselector" type="text" id="txtnation1" mandatory disabled="disabled" maxlength="50">
+                                                                            <span class="fa fa-fw fa-lock field-icon  <%--toggle-selecticon--%>"></span> 
                                                                             <label class="temp_input_label" for="txtnation1"><span class="temp_input_label-content">Select Nationality*</span></label>
                                                                             <div class="selectorautocompletemenu"></div>
                                                                         </span>
@@ -303,9 +303,9 @@
                                                                     <div class="form-group">
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap selectbox idtypespn">
                                                                             <input class="temp_input_field idselector" type="text" id="txtidtype1" mandatory maxlength="50">
-                                                                            <span class="fa fa-fw fa-caret-down field-icon toggle-selecticon"></span>
+                                                                            <span class="fa fa-fw fa-lock field-icon "></span> 
                                                                             <label class="temp_input_label" for="txtidtype1"><span class="temp_input_label-content">Select ID Type*</span></label>
-                                                                            <div class="selectorautocompletemenu"></div>
+                                                                           <%-- <div class="selectorautocompletemenu"></div>--%>
                                                                         </span>
                                                                     </div>
                                                                 </div>
@@ -316,7 +316,7 @@
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap" id="cprTips">
 
                                                                             <input class="temp_input_field" type="text" id="txtapr1" runat="server" readonly mandatory autocomplete="off" >
-
+                                                                             <span class="fa fa-fw fa-lock field-icon "></span> 
                                                                             <label class="temp_input_label" for="txtapr1"><span class="temp_input_label-content spnlabel" id="spnid1"></span></label>
                                                                         </span>
 
@@ -353,8 +353,8 @@
                                                                 <div class="col-md-6">
                                                                     <div class="form-group">
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap input--filled selectbox">
-                                                                            <input class="temp_input_field nationcodeselector" type="text" id="txtnationcode1" mandatory maxlength="50" required>
-                                                                            <span class="fa fa-fw fa-caret-down field-icon toggle-selecticon"></span>
+                                                                            <input class="temp_input_field nationcodeselector" type="text" id="txtnationcode1" disabled="disabled" mandatory maxlength="50" required>
+                                                                            <span class="fa fa-fw fa-lock field-icon toggle-selecticon"></span>
                                                                             <label class="temp_input_label" for="txtnationcode1"><span class="temp_input_label-content">Country Code*</span></label>
                                                                             <div class="selectorautocompletemenu"></div>
                                                                         </span>
@@ -367,7 +367,7 @@
                                                                         <label for="Tooltips" class="errortool17" style="font-weight:normal"></label>
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap">
 
-                                                                            <input class="temp_input_field contactconsumer" type="text" id="txtcontact1" mandatory maxlength="10" autocomplete="off">
+                                                                            <input class="temp_input_field contactconsumer" type="text" id="txtcontact1" mandatory maxlength="8" autocomplete="off">
                                                                             <label class="temp_input_label" for="txtcontact1"><span class="temp_input_label-content">Contact Number*</span></label>
                                                                         </span>
                                                                     </div>
@@ -489,8 +489,8 @@
                                                                 <div class="col-md-6">
                                                                     <div class="form-group">
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap selectbox nationspn">
-                                                                            <input class="temp_input_field nationselector" type="text" id="txtnation2" mandatory maxlength="50">
-                                                                            <span class="fa fa-fw fa-caret-down field-icon toggle-selecticon"></span>
+                                                                            <input class="temp_input_field nationselector" type="text" id="txtnation2" disabled="disabled" mandatory maxlength="50">
+                                                                            <span class="fa fa-fw fa-lock field-icon toggle-selecticon"></span>
                                                                             <label class="temp_input_label" for="txtnation2"><span class="temp_input_label-content">Select Nationality*</span></label>
                                                                             <div class="selectorautocompletemenu"></div>
                                                                         </span>
@@ -502,7 +502,7 @@
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap selectbox idtypespn">
 
                                                                             <input class="temp_input_field idselector" type="text" id="txtidtype2" mandatory maxlength="50">
-                                                                            <span class="fa fa-fw fa-caret-down field-icon toggle-selecticon"></span>
+                                                                            <span class="fa fa-fw fa-lock field-icon toggle-selecticon"></span>
                                                                             <label class="temp_input_label" for="txtidtype2"><span class="temp_input_label-content">Select ID Type*</span></label>
                                                                             <div class="selectorautocompletemenu"></div>
                                                                         </span>
@@ -514,6 +514,7 @@
                                                                         <label for="Tooltips" class="errortool3" style="font-weight:normal"></label>
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap" id="cprTips1">
                                                                             <input class="temp_input_field" type="text" id="txtapr2" runat="server" readonly autocomplete="off">
+                                                                             <span class="fa fa-fw fa-lock field-icon "></span> 
                                                                             <label class="temp_input_label" for="txtapr2"><span class="temp_input_label-content spnlabel" id="spnid2"></span></label>
                                                                         </span>
 
@@ -546,8 +547,8 @@
                                                                 <div class="col-md-6">
                                                                     <div class="form-group">
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap input--filled selectbox">
-                                                                            <input class="temp_input_field nationcodeselector" type="text" id="txtnationcode2" mandatory maxlength="50">
-                                                                            <span class="fa fa-fw fa-caret-down field-icon toggle-selecticon"></span>
+                                                                            <input class="temp_input_field nationcodeselector" type="text" id="txtnationcode2" disabled="disabled" mandatory maxlength="50">
+                                                                            <span class="fa fa-fw fa-lock field-icon toggle-selecticon"></span>
                                                                             <label class="temp_input_label" for="txtnationcode2"><span class="temp_input_label-content">Country Code*</span></label>
                                                                             <div class="selectorautocompletemenu"></div>
                                                                         </span>
@@ -558,7 +559,7 @@
                                                                     <div class="form-group">
                                                                         <label for="Tooltips" class="errortool18" style="font-weight:normal"></label>
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap">
-                                                                            <input class="temp_input_field contactconsumer" type="text" id="txtcontact2" mandatory number maxlength="10" autocomplete="off">
+                                                                            <input class="temp_input_field contactconsumer" type="text" id="txtcontact2" mandatory number maxlength="8" autocomplete="off">
                                                                             <label class="temp_input_label" for="txtcontact2"><span class="temp_input_label-content">Contact Number*</span></label>
                                                                         </span>
                                                                     </div>
@@ -705,8 +706,8 @@
                                                                 <div class="col-md-6">
                                                                     <div class="form-group">
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap selectbox nationspn">
-                                                                            <input class="temp_input_field nationselector" type="text" id="txtnation3" mandatory maxlength="50" />
-                                                                            <span class="fa fa-fw fa-caret-down field-icon toggle-selecticon"></span>
+                                                                            <input class="temp_input_field nationselector" type="text" id="txtnation3" disabled="disabled" mandatory maxlength="50" />
+                                                                            <span class="fa fa-fw fa-lock field-icon toggle-selecticon"></span>
                                                                             <label class="temp_input_label" for="txtnation3"><span class="temp_input_label-content">Select Nationality*</span></label>
                                                                             <div class="selectorautocompletemenu"></div>
                                                                         </span>
@@ -717,7 +718,7 @@
                                                                     <div class="form-group">
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap selectbox idtypespn">
                                                                             <input class="temp_input_field idselector" type="text" id="txtidtype3" mandatory maxlength="50">
-                                                                            <span class="fa fa-fw fa-caret-down field-icon toggle-selecticon"></span>
+                                                                            <span class="fa fa-fw fa-lock field-icon toggle-selecticon"></span>
                                                                             <label class="temp_input_label" for="txtidtype3"><span class="temp_input_label-content">Select ID Type*</span></label>
                                                                             <div class="selectorautocompletemenu"></div>
                                                                         </span>
@@ -729,6 +730,7 @@
                                                                         <label for="Tooltips" class="errortool5" style="font-weight:normal"></label>
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap" id="cprTips2">
                                                                             <input class="temp_input_field" type="text" id="txtapr3" runat="server" readonly autocomplete="off">
+                                                                            <span class="fa fa-fw fa-lock field-icon "></span> 
                                                                             <label class="temp_input_label" for="txtapr3"><span class="temp_input_label-content spnlabel" id="spnid3"></span></label>
                                                                         </span>
 
@@ -762,8 +764,8 @@
                                                                 <div class="col-md-6">
                                                                     <div class="form-group">
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap input--filled selectbox">
-                                                                            <input class="temp_input_field nationcodeselector" type="text" id="txtnationcode3" mandatory maxlength="50" autocomplete="off">
-                                                                            <span class="fa fa-fw fa-caret-down field-icon toggle-selecticon"></span>
+                                                                            <input class="temp_input_field nationcodeselector" type="text" id="txtnationcode3" disabled="disabled" mandatory maxlength="50" autocomplete="off">
+                                                                            <span class="fa fa-fw fa-lock field-icon toggle-selecticon"></span>
                                                                             <label class="temp_input_label" for="txtnationcode3"><span class="temp_input_label-content">Country Code*</span></label>
                                                                             <div class="selectorautocompletemenu"></div>
                                                                         </span>
@@ -774,7 +776,7 @@
                                                                     <div class="form-group">
                                                                         <label for="Tooltips" class="errortool19" style="font-weight:normal"></label>
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap">
-                                                                            <input class="temp_input_field contactconsumer" type="text" id="txtcontact3" mandatory maxlength="10">
+                                                                            <input class="temp_input_field contactconsumer" type="text" id="txtcontact3" mandatory maxlength="8">
                                                                             <label class="temp_input_label" for="txtcontact3"><span class="temp_input_label-content">Contact Number*</span></label>
                                                                         </span>
                                                                     </div>
@@ -2299,7 +2301,7 @@
     <script>
         $(function () {
             var availableTags = [{ 'label': "CPR Number", 'value': "CPR Number" },
-            { 'label': "Passport", 'value': "Passport" }];
+             { 'label': "Passport", 'value': "Passport" }];
             $(".idselector").each(function () {
                 $(this).autocomplete({
                     source: availableTags,

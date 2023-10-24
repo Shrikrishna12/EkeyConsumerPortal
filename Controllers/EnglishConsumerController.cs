@@ -170,7 +170,7 @@ namespace TRAWebApplication.Controllers
         [HttpPost]       
         [HostAuthentication(DefaultAuthenticationTypes.ExternalBearer)]
         [Authorize]
-        [Route("api/EnglishConsumer/createComplaints")]
+        [Route("api/EnglishConsumer/createComplaintsENG")]
         public async Task<IHttpActionResult> createComplaints()
         {
             try

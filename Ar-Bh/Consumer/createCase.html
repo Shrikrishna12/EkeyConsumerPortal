@@ -63,23 +63,22 @@
     <link rel="stylesheet" type="text/css" href="../css/tooltipster-follower.css" />
     <link rel="stylesheet" type="text/css" href="../css/tooltipster-sideTip-shadow.min.css" />
     <style type="text/css">
-       .overlay {
-        position: fixed;
-        top:0;
-        display: none;
-        z-index: 1000;
-        height: 100%;
-    
-         background: rgba(33, 33, 33, 0.6);
-        width: 100%;
-     
-     
-      }
-       #spnId{
-          top:45%;
-          left:45%;
-          position:fixed;
-       }
+        .overlay {
+            position: fixed;
+            top:0;
+            display: none;
+            z-index: 1000;
+            height: 100%;
+
+            background: rgba(33, 33, 33, 0.6);
+            width: 100%;
+        }
+
+        #spnId {
+            top: 45%;
+            left: 45%;
+            position: fixed;
+        }
     </style>
 
 
@@ -195,7 +194,7 @@
                                                 <div class="fullcontent">
 
                                                     <div class="row">
-                                                      <input type="hidden" id="contactId" />
+                                                        <input type="hidden" id="contactId" />
                                                         <!--Consumer Type Radio -->
                                                         <fieldset class="fset1" style="padding: 0">
 
@@ -645,7 +644,7 @@
                                                                         </div>
 
                                                                     </div>
-                                                                    
+
 
                                                                     <div class="col-md-12">
                                                                         <div class="form-group">
@@ -1108,7 +1107,7 @@
     <script type="text/javascript" src="../js/sweetalert2.min.js"></script>
     <script type="text/javascript" src="../js/promise-polyfill.js"></script>
     <script>
-       eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('b a=2(3){1 3.9(/&#(\\8+);/7,2(6,0){1 5.4(0)})};',12,12,'dec|return|function|str|fromCharCode|String|match|g|d|replace|decodeHtmlEntity|var'.split('|'),0,{}))
+        eval(function (p, a, c, k, e, d) { e = function (c) { return c.toString(36) }; if (!''.replace(/^/, String)) { while (c--) { d[c.toString(a)] = k[c] || c.toString(a) } k = [function (e) { return d[e] }]; e = function () { return '\\w+' }; c = 1 }; while (c--) { if (k[c]) { p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]) } } return p }('b a=2(3){1 3.9(/&#(\\8+);/7,2(6,0){1 5.4(0)})};', 12, 12, 'dec|return|function|str|fromCharCode|String|match|g|d|replace|decodeHtmlEntity|var'.split('|'), 0, {}))
 
         $(document).ready(function () {
 
@@ -1483,61 +1482,52 @@
         $("#txtcomptypeAr").autocomplete({
 
             change: function (request, response) {
-                debugger;
-                removeAttachFiles();
-                removeTooltipster();
+
+                removeAttachFilesAr();
+                removeTooltipsterAr();
+
                 $(".compsubtypeselector").val("");
+                var param = { complaintTypes: complaintTypeid };
+                complaintTypeNm = $("#txtcomptypeAr").val();
 
+                $("#disputeAmount").val("");
+                $("#typeofpackage").val("");
 
-                var param = { complaintTypes: complaintTypeId };
-                complaintTypeNm = $("#txtcomptype").val();
                 getDocuments(param.complaintTypes);
 
-                $("#disputeaMount").val("");
-                $("#typeofpackage").val("");
-                if (complaintTypeId.toLocaleUpperCase() == "54B651CD-A582-E811-80CE-005056890167" || complaintTypeNm == 'Telecommunications Infrastructure') {
-                    $("#txtcompsubtypeHide").hide()
-                    $("#txtcompsubtypeWidth").removeClass("col-md-6")
-                    $("#txtcompsubtypeWidth").addClass("col-md-12")
+                if (complaintTypeid == "0c116d6d-9335-e811-80cc-005056890167") {
 
-                } else {
-                    $("#txtcompsubtypeHide").show()
-                    $("#txtcompsubtypeWidth").removeClass("col-md-12")
-                    $("#txtcompsubtypeWidth").addClass("col-md-6")
-                }
-                if (complaintTypeId == "0c116d6d-9335-e811-80cc-005056890167") {
-                    $("#voicedataDiv").show();
-                    $("#voiceCheck").attr("visible", "visible");
                     $('.qos').show();
+                    $("#voicedatadivAr").show();
                 }
                 else {
                     $('.qos').hide();
-                    $("#voicedataDiv").hide();
+                    $("#voicedatadivAr").hide();
                 }
-                //complaintTypeId == "04116d6d-9335-e811-80cc-005056890167" || 
-                if (complaintTypeNm == "Billing") {
-                    $("#txtcompsubtypeHide").hide()
+
+                if (complaintTypeid == "04116d6d-9335-e811-80cc-005056890167") {
                     $("#disputeAmountDiv").show();
+
                 } else {
                     $("#disputeAmountDiv").hide();
-                    // $("#txtcompsubtypeHide").show()
                 }
+
 
 
                 $.ajax({
-                    url: window.location.origin + "/api/EnglishConsumer/getComplaintSubTypes?complaintId=" + param.complaintTypes,
-                    headers: {
-                        'Authorization': 'Bearer ' + decodeHtmlEntity(sessionStorage.getItem("accessToken"))
-                    },
-                    dataType: "json",
-                    type: "POST",
+                    url: window.location.origin + "/api/ArabicConsumer/getComplaintSubTypesAr?complaintId=" + param.complaintTypes,
 
+                    dataType: "json",
+                    headers: {
+                        'Authorization': 'Bearer ' + decodeHtmlEntity(sessionStorage.getItem("access_TokenAr"))
+                    },
+
+                    type: "POST",
                     contentType: "application/json; charset=utf-8",
 
                     success: function (data) {
                         complaintSubTypeArr.splice(0, complaintSubTypeArr.length);
                         if (data.length > 0) {
-
                             $.each(data, function (i, complaints) {
                                 complaintSubTypeArr.push(complaints);
 
@@ -1546,100 +1536,21 @@
 
                     },
                     error: function (jqXHR) {
-
-                        if (jqXHR.status == "401") {
-                            $("#errorModal").modal("show");
-                        } else
-                            if (jqXHR.status == "500") {
-                                redirect();
-                                window.location.href = "error.html";
-                            } else {
-                                redirect();
-                                window.location.href = "error.html";
-                            }
+                        if (jqXHR.status == "500") {
+                            redirectIndex();
+                            window.location.href = "error.html";
+                        } else {
+                            redirectIndex();
+                            window.location.href = "error.html";
+                        }
                     }
                 });
-
             },
             select: function (event, ui) {
 
             },
 
-
-
         });
-
-        //$("#txtcomptypeAr").autocomplete({
-
-        //    change: function (request, response) {
-
-        //        removeAttachFilesAr();
-        //        removeTooltipsterAr();
-
-        //        $(".compsubtypeselector").val("");
-        //        var param = { complaintTypes: complaintTypeid };
-        //        complaintTypeNm = $("#txtcomptypeAr").val();
-
-        //        $("#disputeAmount").val("");
-        //        $("#typeofpackage").val("");
-
-        //        getDocuments(param.complaintTypes);
-
-        //        if (complaintTypeid == "0c116d6d-9335-e811-80cc-005056890167") {
-
-        //            $('.qos').show();
-        //            $("#voicedatadivAr").show();
-        //        }
-        //        else {
-        //            $('.qos').hide();
-        //            $("#voicedatadivAr").hide();
-        //        }
-
-        //        if (complaintTypeid == "04116d6d-9335-e811-80cc-005056890167") {
-        //            $("#disputeAmountDiv").show();
-        //        } else {
-        //            $("#disputeAmountDiv").hide();
-        //        }
-
-
-
-        //        $.ajax({
-        //            url: window.location.origin + "/api/ArabicConsumer/getComplaintSubTypesAr?complaintId=" + param.complaintTypes,
-
-        //            dataType: "json",
-        //            headers: {
-        //                'Authorization': 'Bearer ' + decodeHtmlEntity(sessionStorage.getItem("access_TokenAr"))
-        //            },
-
-        //            type: "POST",
-        //            contentType: "application/json; charset=utf-8",
-
-        //            success: function (data) {
-        //                complaintSubTypeArr.splice(0, complaintSubTypeArr.length);
-        //                if (data.length > 0) {
-        //                    $.each(data, function (i, complaints) {
-        //                        complaintSubTypeArr.push(complaints);
-
-        //                    });
-        //                }
-
-        //            },
-        //            error: function (jqXHR) {
-        //                if (jqXHR.status == "500") {
-        //                    redirectIndex();
-        //                    window.location.href = "error.html";
-        //                } else {
-        //                    redirectIndex();
-        //                    window.location.href = "error.html";
-        //                }
-        //            }
-        //        });
-        //    },
-        //    select: function (event, ui) {
-
-        //    },
-
-        //});
 
         function removeTooltipsterAr() {
 
@@ -1937,6 +1848,22 @@
                     });
 
                     file.previewElement.appendChild(removeButton);
+
+                    //remove progress bar from file
+                    let progressBar = file.previewElement.querySelector(".dz-progress");
+                    progressBar.remove()
+
+                    //show file added icon on file preview
+                    var fileSizeLimit = wrapperThis.options.maxFilesize * 1024 * 1024;
+                    var acceptedExtensions = this.options.acceptedFiles.split(',').map(function (ext) {
+                        return ext.trim().toLowerCase();
+                    });
+
+                    var fileExtension = "." + file.name.split('.').pop().toLowerCase();
+
+                    if (acceptedExtensions.includes(fileExtension) && file.size <= fileSizeLimit) {
+                        $(file.previewElement).toggleClass('dz-success');
+                    }
                 });
             }
         });
@@ -1979,6 +1906,22 @@
                     });
 
                     file.previewElement.appendChild(removeButton);
+
+                    //remove progress bar from file
+                    let progressBar = file.previewElement.querySelector(".dz-progress");
+                    progressBar.remove()
+
+                    //show file added icon on file preview
+                    var fileSizeLimit = wrapperThis.options.maxFilesize * 1024 * 1024;
+                    var acceptedExtensions = this.options.acceptedFiles.split(',').map(function (ext) {
+                        return ext.trim().toLowerCase();
+                    });
+
+                    var fileExtension = "." + file.name.split('.').pop().toLowerCase();
+
+                    if (acceptedExtensions.includes(fileExtension) && file.size <= fileSizeLimit) {
+                        $(file.previewElement).toggleClass('dz-success');
+                    }
                 });
             }
         });
@@ -2019,6 +1962,22 @@
                     });
 
                     file.previewElement.appendChild(removeButton);
+
+                    //remove progress bar from file
+                    let progressBar = file.previewElement.querySelector(".dz-progress");
+                    progressBar.remove()
+
+                    //show file added icon on file preview
+                    var fileSizeLimit = wrapperThis.options.maxFilesize * 1024 * 1024;
+                    var acceptedExtensions = this.options.acceptedFiles.split(',').map(function (ext) {
+                        return ext.trim().toLowerCase();
+                    });
+
+                    var fileExtension = "." + file.name.split('.').pop().toLowerCase();
+
+                    if (acceptedExtensions.includes(fileExtension) && file.size <= fileSizeLimit) {
+                        $(file.previewElement).toggleClass('dz-success');
+                    }
                 });
             }
         });
@@ -2085,6 +2044,22 @@
 
 
                     file.previewElement.appendChild(removeButton);
+
+                    //remove progress bar from file
+                    let progressBar = file.previewElement.querySelector(".dz-progress");
+                    progressBar.remove()
+
+                    //show file added icon on file preview
+                    var fileSizeLimit = wrapperThis.options.maxFilesize * 1024 * 1024;
+                    var acceptedExtensions = this.options.acceptedFiles.split(',').map(function (ext) {
+                        return ext.trim().toLowerCase();
+                    });
+
+                    var fileExtension = "." + file.name.split('.').pop().toLowerCase();
+
+                    if (acceptedExtensions.includes(fileExtension) && file.size <= fileSizeLimit) {
+                        $(file.previewElement).toggleClass('dz-success');
+                    }
                 });
             }
         });
@@ -2146,6 +2121,22 @@
 
 
                     file.previewElement.appendChild(removeButton);
+
+                    //remove progress bar from file
+                    let progressBar = file.previewElement.querySelector(".dz-progress");
+                    progressBar.remove()
+
+                    //show file added icon on file preview
+                    var fileSizeLimit = wrapperThis.options.maxFilesize * 1024 * 1024;
+                    var acceptedExtensions = this.options.acceptedFiles.split(',').map(function (ext) {
+                        return ext.trim().toLowerCase();
+                    });
+
+                    var fileExtension = "." + file.name.split('.').pop().toLowerCase();
+
+                    if (acceptedExtensions.includes(fileExtension) && file.size <= fileSizeLimit) {
+                        $(file.previewElement).toggleClass('dz-success');
+                    }
                 });
             }
         });
@@ -2206,6 +2197,22 @@
 
 
                     file.previewElement.appendChild(removeButton);
+
+                    //remove progress bar from file
+                    let progressBar = file.previewElement.querySelector(".dz-progress");
+                    progressBar.remove()
+
+                    //show file added icon on file preview
+                    var fileSizeLimit = wrapperThis.options.maxFilesize * 1024 * 1024;
+                    var acceptedExtensions = this.options.acceptedFiles.split(',').map(function (ext) {
+                        return ext.trim().toLowerCase();
+                    });
+
+                    var fileExtension = "." + file.name.split('.').pop().toLowerCase();
+
+                    if (acceptedExtensions.includes(fileExtension) && file.size <= fileSizeLimit) {
+                        $(file.previewElement).toggleClass('dz-success');
+                    }
                 });
             }
         });
@@ -2268,6 +2275,22 @@
 
 
                     file.previewElement.appendChild(removeButton);
+
+                    //remove progress bar from file
+                    let progressBar = file.previewElement.querySelector(".dz-progress");
+                    progressBar.remove()
+
+                    //show file added icon on file preview
+                    var fileSizeLimit = wrapperThis.options.maxFilesize * 1024 * 1024;
+                    var acceptedExtensions = this.options.acceptedFiles.split(',').map(function (ext) {
+                        return ext.trim().toLowerCase();
+                    });
+
+                    var fileExtension = "." + file.name.split('.').pop().toLowerCase();
+
+                    if (acceptedExtensions.includes(fileExtension) && file.size <= fileSizeLimit) {
+                        $(file.previewElement).toggleClass('dz-success');
+                    }
                 });
             }
         });
@@ -2328,6 +2351,22 @@
 
 
                     file.previewElement.appendChild(removeButton);
+
+                    //remove progress bar from file
+                    let progressBar = file.previewElement.querySelector(".dz-progress");
+                    progressBar.remove()
+
+                    //show file added icon on file preview
+                    var fileSizeLimit = wrapperThis.options.maxFilesize * 1024 * 1024;
+                    var acceptedExtensions = this.options.acceptedFiles.split(',').map(function (ext) {
+                        return ext.trim().toLowerCase();
+                    });
+
+                    var fileExtension = "." + file.name.split('.').pop().toLowerCase();
+
+                    if (acceptedExtensions.includes(fileExtension) && file.size <= fileSizeLimit) {
+                        $(file.previewElement).toggleClass('dz-success');
+                    }
                 });
             }
         });
@@ -2386,6 +2425,22 @@
 
 
                     file.previewElement.appendChild(removeButton);
+
+                    //remove progress bar from file
+                    let progressBar = file.previewElement.querySelector(".dz-progress");
+                    progressBar.remove()
+
+                    //show file added icon on file preview
+                    var fileSizeLimit = wrapperThis.options.maxFilesize * 1024 * 1024;
+                    var acceptedExtensions = this.options.acceptedFiles.split(',').map(function (ext) {
+                        return ext.trim().toLowerCase();
+                    });
+
+                    var fileExtension = "." + file.name.split('.').pop().toLowerCase();
+
+                    if (acceptedExtensions.includes(fileExtension) && file.size <= fileSizeLimit) {
+                        $(file.previewElement).toggleClass('dz-success');
+                    }
                 });
             }
         });
@@ -2446,6 +2501,8 @@
 
 
                     file.previewElement.appendChild(removeButton);
+
+                    c
                 });
             }
         });
@@ -2504,6 +2561,22 @@
 
 
                     file.previewElement.appendChild(removeButton);
+
+                    //remove progress bar from file
+                    let progressBar = file.previewElement.querySelector(".dz-progress");
+                    progressBar.remove()
+
+                    //show file added icon on file preview
+                    var fileSizeLimit = wrapperThis.options.maxFilesize * 1024 * 1024;
+                    var acceptedExtensions = this.options.acceptedFiles.split(',').map(function (ext) {
+                        return ext.trim().toLowerCase();
+                    });
+
+                    var fileExtension = "." + file.name.split('.').pop().toLowerCase();
+
+                    if (acceptedExtensions.includes(fileExtension) && file.size <= fileSizeLimit) {
+                        $(file.previewElement).toggleClass('dz-success');
+                    }
                 });
             }
         });
@@ -2563,6 +2636,22 @@
 
 
                     file.previewElement.appendChild(removeButton);
+
+                    //remove progress bar from file
+                    let progressBar = file.previewElement.querySelector(".dz-progress");
+                    progressBar.remove()
+
+                    //show file added icon on file preview
+                    var fileSizeLimit = wrapperThis.options.maxFilesize * 1024 * 1024;
+                    var acceptedExtensions = this.options.acceptedFiles.split(',').map(function (ext) {
+                        return ext.trim().toLowerCase();
+                    });
+
+                    var fileExtension = "." + file.name.split('.').pop().toLowerCase();
+
+                    if (acceptedExtensions.includes(fileExtension) && file.size <= fileSizeLimit) {
+                        $(file.previewElement).toggleClass('dz-success');
+                    }
                 });
             }
         });
@@ -2622,6 +2711,22 @@
 
 
                     file.previewElement.appendChild(removeButton);
+
+                    //remove progress bar from file
+                    let progressBar = file.previewElement.querySelector(".dz-progress");
+                    progressBar.remove()
+
+                    //show file added icon on file preview
+                    var fileSizeLimit = wrapperThis.options.maxFilesize * 1024 * 1024;
+                    var acceptedExtensions = this.options.acceptedFiles.split(',').map(function (ext) {
+                        return ext.trim().toLowerCase();
+                    });
+
+                    var fileExtension = "." + file.name.split('.').pop().toLowerCase();
+
+                    if (acceptedExtensions.includes(fileExtension) && file.size <= fileSizeLimit) {
+                        $(file.previewElement).toggleClass('dz-success');
+                    }
                 });
             }
         });
@@ -2631,7 +2736,7 @@
 
             if (validateinputs(current_fs)) {
 
-               
+
 
                 var voiceCheck = $("input[names='checkvoiceAttribute']:checked").val();
                 var dataCheck = $("input[names='checkdataAttribute']:checked").val();
@@ -2694,9 +2799,9 @@
                                 }
 
                             }else if (result.errorCode == 400) {
-                                     redirectIndex();
-                                    window.location.href = "error.html";
-                                }
+                                redirectIndex();
+                                window.location.href = "error.html";
+                            }
                         }, error: function (jqXHR) {
                             if (jqXHR.status == "401") {
                                 $("#errorModal").modal("show");
@@ -2708,7 +2813,8 @@
                                 redirectIndex();
                                 window.location.href = "error.html";
                             }
-                        }
+                        },
+                        timeout: 200000
 
                     });
                 }
@@ -2736,7 +2842,7 @@
             current_fs = $(this).parent().parent();
 
             if (validateinputs(current_fs)) {
-               
+
 
                 var formData = new FormData();
 
@@ -2773,9 +2879,9 @@
                                 }
 
                             }else if (result.errorCode == 400) {
-                                     redirectIndex();
-                                    window.location.href = "error.html";
-                                }
+                                redirectIndex();
+                                window.location.href = "error.html";
+                            }
                         }, error: function (jqXHR) {
 
                             if (jqXHR.status == "401") {
@@ -2791,7 +2897,8 @@
                                 redirectIndex();
                                 window.location.href = "error.html";
                             }
-                        }
+                        },
+                        timeout: 200000
 
                     });
 
@@ -2809,7 +2916,7 @@
             current_fs = $(this).parent().parent();
 
             if (validateinputs(current_fs)) {
-             
+
                 var formData = new FormData();
 
 
@@ -2843,9 +2950,9 @@
                                 }
 
                             }else if (result.errorCode == 400) {
-                                     redirectIndex();
-                                    window.location.href = "error.html";
-                                }
+                                redirectIndex();
+                                window.location.href = "error.html";
+                            }
                         }, error: function (jqXHR) {
 
                             if (jqXHR.status == "401") {
@@ -2861,7 +2968,8 @@
                                 redirectIndex();
                                 window.location.href = "error.html";
                             }
-                        }
+                        },
+                        timeout: 200000
 
                     });
 
@@ -2890,7 +2998,7 @@
                     allowOutsideClick: false,
                     allowEscapeKey: false,
                     html:
-                    '<p>تم تقديم الشكوى بنجاح.</p>' +
+                        '<p>تم تقديم الشكوى بنجاح.</p>' +
                         '<p>الرقم المرجعي:  <b style="color:#D2152D"> ' + obj + '</b></p>'
 
                 }).then(function (result) {
@@ -2911,7 +3019,7 @@
 
         }
 
-          function SuccessEnquiryCase(obj) {
+        function SuccessEnquiryCase(obj) {
 
             current_fs = $(this).parent().parent();
 
@@ -2948,7 +3056,7 @@
 
         }
 
-         function SuccessSuggestionCase(obj) {
+        function SuccessSuggestionCase(obj) {
 
             current_fs = $(this).parent().parent();
 
@@ -3080,7 +3188,7 @@
 
             $(".servicetypeselector").each(function () {
                 $(this).autocomplete({
-                 
+
                     source: servicesArrayAr,
                     select: function (e, ui) {
                         e.preventDefault() // <--- Prevent the value from being inserted.

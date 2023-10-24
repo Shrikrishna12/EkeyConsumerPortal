@@ -275,8 +275,8 @@
                                                                 <div class="col-md-6">
                                                                     <div class="form-group">
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap selectbox nationspn">
-                                                                            <input class="temp_input_field nationselector" type="text" id="txtnation1" mandatory maxlength="50">
-                                                                            <span class="fa fa-fw fa-caret-down field-icon toggle-selecticon"></span>
+                                                                            <input class="temp_input_field nationselector" type="text" id="txtnation1" disabled="disabled" mandatory maxlength="50">
+                                                                            <span class="fa fa-fw fa-lock field-icon toggle-selecticon"></span>
                                                                             <label class="temp_input_label" for="txtnation1"><span class="temp_input_label-content">البلد   *</span></label>
                                                                             <div class="selectorautocompletemenu"></div>
                                                                         </span>
@@ -287,7 +287,7 @@
                                                                     <div class="form-group">
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap selectbox idtypespn">
                                                                             <input class="temp_input_field idselector" type="text" id="txtidtype1" mandatory maxlength="50">
-                                                                            <span class="fa fa-fw fa-caret-down field-icon toggle-selecticon"></span>
+                                                                            <span class="fa fa-fw fa-lock field-icon toggle-selecticon"></span>
                                                                             <label class="temp_input_label" for="txtidtype1"><span class="temp_input_label-content">نوع الهوية*</span></label>
                                                                             <div class="selectorautocompletemenu"></div>
                                                                         </span>
@@ -299,6 +299,7 @@
                                                                         <label for="Tooltips" class="errortool11" style="font-weight:normal"></label>
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap">
                                                                             <input class="temp_input_field" type="text" id="txtapr1" runat="server" readonly mandatory autocomplete="off">
+                                                                            <span class="fa fa-fw fa-lock field-icon "></span>
                                                                             <label class="temp_input_label" for="txtapr1"><span class="temp_input_label-content" id="spnid1"></span></label>
                                                                         </span>
                                                                     </div>
@@ -330,8 +331,8 @@
                                                                 <div class="col-md-6">
                                                                     <div class="form-group">
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap input--filled selectbox">
-                                                                            <input class="temp_input_field nationcodeselector" type="text" id="txtnationcode1" mandatory maxlength="50">
-                                                                            <span class="fa fa-fw fa-caret-down field-icon toggle-selecticon"></span>
+                                                                            <input class="temp_input_field nationcodeselector" type="text" id="txtnationcode1" disabled="disabled" mandatory maxlength="50">
+                                                                            <span class="fa fa-fw fa-lock field-icon toggle-selecticon"></span>
                                                                             <label class="temp_input_label" for="txtnationcode1"><span class="temp_input_label-content">الرمز الدولي*</span></label>
                                                                             <div class="selectorautocompletemenu"></div>
                                                                         </span>
@@ -342,7 +343,7 @@
                                                                     <div class="form-group">
                                                                         <label for="Tooltips" class="errortool20" style="font-weight:normal"></label>
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap">
-                                                                            <input class="temp_input_field num" type="text" id="txtcontact1" mandatory number maxlength="10" autocomplete="off">
+                                                                            <input class="temp_input_field num" type="text" id="txtcontact1" mandatory number maxlength="8" autocomplete="off">
                                                                             <label class="temp_input_label" for="txtcontact1"><span class="temp_input_label-content">رقم الاتصال*</span></label>
                                                                         </span>
                                                                     </div>
@@ -423,8 +424,8 @@
                                                                 <div class="col-md-6">
                                                                     <div class="form-group">
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap selectbox nationspn">
-                                                                            <input class="temp_input_field nationselector" type="text" id="txtnation2" mandatory maxlength="50">
-                                                                            <span class="fa fa-fw fa-caret-down field-icon toggle-selecticon"></span>
+                                                                            <input class="temp_input_field nationselector" type="text" id="txtnation2" disabled="disabled" mandatory maxlength="50">
+                                                                            <span class="fa fa-fw fa-lock field-icon toggle-selecticon"></span>
                                                                             <label class="temp_input_label" for="txtnation2"><span class="temp_input_label-content">البلد*</span></label>
                                                                             <div class="selectorautocompletemenu"></div>
                                                                         </span>
@@ -435,7 +436,7 @@
                                                                     <div class="form-group">
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap selectbox idtypespn">
                                                                             <input class="temp_input_field idselector" type="text" id="txtidtype2" mandatory maxlength="50">
-                                                                            <span class="fa fa-fw fa-caret-down field-icon toggle-selecticon"></span>
+                                                                            <span class="fa fa-fw fa-lock field-icon toggle-selecticon"></span>
                                                                             <label class="temp_input_label" for="txtidtype2"><span class="temp_input_label-content">نوع الهوية*</span></label>
                                                                             <div class="selectorautocompletemenu"></div>
                                                                         </span>
@@ -447,6 +448,7 @@
                                                                         <label for="Tooltips" class="errortool13" style="font-weight:normal"></label>
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap">
                                                                             <input class="temp_input_field" type="text" id="txtapr2" runat="server" readonly mandatory autocomplete="off">
+                                                                           <span class="fa fa-fw fa-lock field-icon "></span>
                                                                             <label class="temp_input_label" for="txtapr2"><span class="temp_input_label-content" id="spnid2"</span></label>
                                                                         </span>
                                                                     </div>
@@ -477,8 +479,8 @@
                                                                 <div class="col-md-6">
                                                                     <div class="form-group">
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap input--filled selectbox">
-                                                                            <input class="temp_input_field nationcodeselector" type="text" id="txtnationcode2" mandatory maxlength="50">
-                                                                            <span class="fa fa-fw fa-caret-down field-icon toggle-selecticon"></span>
+                                                                            <input class="temp_input_field nationcodeselector" type="text" id="txtnationcode2" disabled="disabled" mandatory maxlength="50">
+                                                                            <span class="fa fa-fw fa-lock field-icon toggle-selecticon"></span>
                                                                             <label class="temp_input_label" for="txtnationcode2"><span class="temp_input_label-content">الرمز الدولي*</span></label>
                                                                             <div class="selectorautocompletemenu"></div>
                                                                         </span>
@@ -489,7 +491,7 @@
                                                                     <div class="form-group">
                                                                         <label for="Tooltips" class="errortool21" style="font-weight:normal"></label>
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap">
-                                                                            <input class="temp_input_field num" type="text" id="txtcontact2" mandatory number maxlength="10" autocomplete="off">
+                                                                            <input class="temp_input_field num" type="text" id="txtcontact2" mandatory number maxlength="8" autocomplete="off">
                                                                             <label class="temp_input_label" for="txtcontact2"><span class="temp_input_label-content">رقم الاتصال*</span></label>
                                                                         </span>
                                                                     </div>
@@ -599,8 +601,8 @@
                                                                 <div class="col-md-6">
                                                                     <div class="form-group">
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap selectbox nationspn">
-                                                                            <input class="temp_input_field nationselector" type="text" id="txtnation3" mandatory maxlength="50">
-                                                                            <span class="fa fa-fw fa-caret-down field-icon toggle-selecticon"></span>
+                                                                            <input class="temp_input_field nationselector" type="text" id="txtnation3" disabled="disabled" mandatory maxlength="50">
+                                                                            <span class="fa fa-fw fa-lock field-icon toggle-selecticon"></span>
                                                                             <label class="temp_input_label" for="txtnation3"><span class="temp_input_label-content">البلد*</span></label>
                                                                             <div class="selectorautocompletemenu"></div>
                                                                         </span>
@@ -611,7 +613,7 @@
                                                                     <div class="form-group">
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap selectbox idtypespn">
                                                                             <input class="temp_input_field idselector" type="text" id="txtidtype3" mandatory maxlength="50">
-                                                                            <span class="fa fa-fw fa-caret-down field-icon toggle-selecticon"></span>
+                                                                            <span class="fa fa-fw fa-lock field-icon toggle-selecticon"></span>
                                                                             <label class="temp_input_label" for="txtidtype3"><span class="temp_input_label-content">نوع الهوية*</span></label>
                                                                             <div class="selectorautocompletemenu"></div>
                                                                         </span>
@@ -623,6 +625,7 @@
                                                                         <label for="Tooltips" class="errortool15" style="font-weight:normal"></label>
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap">
                                                                             <input class="temp_input_field" type="text" id="txtapr3" runat="server" readonly mandatory autocomplete="off">
+                                                                            <span class="fa fa-fw fa-lock field-icon "></span>
                                                                             <label class="temp_input_label" for="txtapr3"><span class="temp_input_label-content" id="spnid3">البطاقة الشخصية/جواز سفر*</span></label>
                                                                         </span>
                                                                     </div>
@@ -654,8 +657,8 @@
                                                                 <div class="col-md-6">
                                                                     <div class="form-group">
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap input--filled selectbox">
-                                                                            <input class="temp_input_field nationcodeselector" type="text" id="txtnationcode3" mandatory maxlength="50">
-                                                                            <span class="fa fa-fw fa-caret-down field-icon toggle-selecticon"></span>
+                                                                            <input class="temp_input_field nationcodeselector" type="text" id="txtnationcode3" disabled="disabled" mandatory maxlength="50">
+                                                                            <span class="fa fa-fw fa-lock field-icon toggle-selecticon"></span>
                                                                             <label class="temp_input_label" for="txtnationcode3"><span class="temp_input_label-content">الرمز الدولي*</span></label>
                                                                             <div class="selectorautocompletemenu"></div>
                                                                         </span>
@@ -666,7 +669,7 @@
                                                                     <div class="form-group">
                                                                         <label for="Tooltips" class="errortool22" style="font-weight:normal"></label>
                                                                         <span class="temp-span-wrap temp-span-input-label-wrap">
-                                                                            <input class="temp_input_field num" type="text" id="txtcontact3" mandatory number maxlength="10" autocomplete="off">
+                                                                            <input class="temp_input_field num" type="text" id="txtcontact3" mandatory number maxlength="8" autocomplete="off">
                                                                             <label class="temp_input_label" for="txtcontact3"><span class="temp_input_label-content">رقم الاتصال*</span></label>
                                                                         </span>
                                                                     </div>

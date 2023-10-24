@@ -305,7 +305,7 @@
 
                                                     <div class="temp-login-button-wrap">
                                                      <asp:Button ID="cmdPost1" runat="server" OnClick="cmdPost1_Click" CssClass="btn btn-style-4"
-        Text="Login withEkey  AR-bh" />
+        Text="دخول" />
                                                    
 <%--                                                        <input type="button" id="loginbtnAr" name="login" class="btn btn-style-4" value="دخول" />--%>
                                                         <span class="temp-span-wrap temp-span-input-label-wrap " id="tooltipz2" data-tooltip-content="#pwrules4" style="display:none">

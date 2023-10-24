@@ -213,6 +213,7 @@ namespace TRAWebApplication.BuisnessLayer
                     _queryData.ColumnSet = new ColumnSet("tra_complainttypear");
                     FilterExpression _filterData = new FilterExpression(LogicalOperator.And);
                     _filterData.AddCondition("statecode", ConditionOperator.Equal, 0);
+                    _filterData.AddCondition("tra_showinconsumerportal", ConditionOperator.Equal, true);
                     _queryData.Criteria = _filterData;
                     EntityCollection _entityCase = service.RetrieveMultiple(_queryData);
                     if (_entityCase != null && _entityCase.Entities != null && _entityCase.Entities.Count > 0)
